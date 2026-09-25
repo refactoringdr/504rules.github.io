@@ -150,6 +150,10 @@
 					<h2>Round-based {{owner}} order</h2>
 					<p>(according to income from high to low)</p>
 				{{/order.income}}
+				{{#order.revincome}}
+					<h2>Round-based {{owner}} order</h2>
+					<p>(according to income from low to high)</p>
+				{{/order.revincome}}
 				{{#order.vp}}
 					<h2>Round-based {{owner}} order</h2>
 					<p>(according to victory points from fewest to most)</p>
@@ -1904,7 +1908,7 @@
 			'III': {
 				'residents': false,
 				'map': {'priority': 9, 'value': 0},
-				'order': {'priority': 3, 'income': true},
+				'order': {'priority': 3, 'revincome': true},
 				'money': {'priority': 9},
 				'parts': {'15s': 1, '31': 5, '32': 45, '20': 3},
 			},
